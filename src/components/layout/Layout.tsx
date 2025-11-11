@@ -9,7 +9,7 @@ export default function Layout({ children }: PropsWithChildren<unknown>) {
     >
       <div className='absolute inset-0 pointer-events-none bg-[radial-gradient(circle, rgba(0,0,0,0)_40%,rgba(0,0,0,0.75)_100%)]' />
 
-      <div className='relative'>
+      <div className='relative h-full'>
         <Header />
         {children}
         <Footer />

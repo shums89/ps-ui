@@ -1,3 +1,12 @@
+import { hotkeysData } from "../../../config/hotkeys.data";
+import { KeyInfo } from "../../ui/KeyInfo";
+
 export function Footer() {
-  return <div>Footer</div>
+  return (
+    <div className="flex items-center gap-5 absolute bottom-5 right-8">
+      {hotkeysData.map(hotkey => (
+        <KeyInfo key={hotkey.label} keyDetail={hotkey} />
+      ))}
+    </div>
+  )
 }
