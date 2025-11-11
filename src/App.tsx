@@ -7,7 +7,7 @@ function App() {
   const [activeCategory, setActiveCategory] = useState<TCategorySlug>('all')
 
   return (
-    <div>
+    <div className='flex flex-col justify-between' style={{ height: '75%' }}>
       <TopMenu activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
       <GameCarousel />
     </div>

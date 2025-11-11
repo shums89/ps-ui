@@ -28,3 +28,31 @@ body {
 button {
   cursor: pointer;
 }
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  overflow: visible !important;
+}
+
+.swiper-slide-active > button > div {
+  @apply shadow-xl;
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.swiper-slide-active {
+  transform: scale(1.15) !important;
+  z-index: 10;
+}
+
+.swiper-slide-active > button > div:first-child {
+  @apply border-white;
+}
+
+.swiper-slide-active > button > div:last-child > img {
+  @apply opacity-70;
+}
