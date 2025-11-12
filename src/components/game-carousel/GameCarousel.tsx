@@ -1,15 +1,20 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { GAMES_DATA } from "../../data/games.data";
 import { GameItem } from "./game-item/GameItem";
 import 'swiper/swiper.css';
 import { UseGameStore } from "../../store";
+import { RefObject } from "react";
 
-export function GameCarousel() {
+interface Props {
+  swiperRef: RefObject<SwiperRef | null>
+}
+export function GameCarousel({ swiperRef }: Props) {
   const { setActiveGameSlug } = UseGameStore()
 
   return (
     <div className="ml-32">
       <Swiper
+        ref={swiperRef}
         slidesPerView={8}
         spaceBetween={18}
         loop

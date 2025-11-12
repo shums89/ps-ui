@@ -1,4 +1,4 @@
-import type { THotkeyKey } from "../../config/hotkeys.data";
+import type { THotkeyKey } from "../../data/hotkeys.data";
 
 interface Props {
   keyDetail: THotkeyKey

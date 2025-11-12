@@ -1,4 +1,4 @@
-import { hotkeysData } from "../../../config/hotkeys.data";
+import { hotkeysData } from "../../../data/hotkeys.data";
 import { KeyInfo } from "../../ui/KeyInfo";
 
 export function Footer() {
